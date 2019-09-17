@@ -1,0 +1,87 @@
+<div class="survey-v2-content">
+  <div class="view-buttons">
+      <span class='view-btn-1 form-btn' id="form-btn">
+        <b>Panels</b>
+      </span>
+    <span class='view-btn-1' id="preview-btn">
+        <b>Preview</b>
+      </span>
+  </div>
+  <div class="mdl-grid mdl-grid--no-spacing" id="survey-preview--content">
+    <div class="setup-container form">
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-phone mdl-cell--12-col-tablet">
+        <div class="wrapper">
+          <br>
+          <div class="new-panel-header">
+            <span class="tab-btn-back-icon">
+              <%= image_tag("back-icon-copy.svg") %>
+            </span>
+            <span class="panel-card-title">Create a Panel</span>
+          </div>
+        </div>
+        <div class="panel-item-container">
+          <div class="invitee-input panel-name-wrapper">
+            <label for="invite-panelist">Panel Name</label>
+            <input type="text" placeholder="Enter Panel Name" id="invite-panelist" class="invitee-input-field panel-name-input invite-panelist">
+          </div>
+          <div>
+            <label for="invite-panelist">Add Learners</label>
+            <ul class="selected-learners"></ul>
+            <div class="pitch-select-shelter panel-learners">
+              <div class="pitch-select-option" id="learner-select-option">
+                <p id="selected">Select Learners</p>
+                <span class="down-arrow"></span>
+              </div>
+              <div class="panel-options-wrapper" id="learner-options-wrapper">
+                <div class = "panel-learners-display"></div>
+              </div>
+            </div>
+          </div>
+          <div class="add-panelists">
+            <label for="invite-panelist2">Add Panelists</label>
+          </div>
+          <div class="panel-item-container invitee-container panelists-wrapper">
+            <div class="invitee-input">
+              <input type="text" placeholder="eagle.example@andela.com" id="invite-panelist2" class="invitee-input-field invite-panelist2">
+              <span class="add-invitee-icon">
+              <%= image_tag("plus-filled.svg") %>
+            </span>
+            </div>
+            <hr class="panel-divider">
+            <div class="invitee-list">
+              <p class="invitee-list-header">
+                Invited Panellists
+              </p>
+              <div class="invitee-list-items list-lfa-email">
+              </div>
+              <div class="invitee-list-footer">
+                <p class="invitee-footer-text">
+                  Invited Panellists will receive an email
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class='create-panel-btn'>
+            Add Panel
+            <i class="icon material-icons add-learner-icon panel-add-btn">add</i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="setup-container preview">
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-phone mdl-cell--12-col-tablet">
+        <button id="submit-panel-btn" style="display: none" class='submit-panel-btn'>
+          Submit
+        </button>
+        <button class="saving-btn" style="display: none;">Submitting<span>.</span><span>.</span><span>.</span></button>
+        <div class="wrapper">
+          <br>
+          <p><span class="panel-card-title preview-title">Preview</span></p>
+          <p id="no-panel-message">You have no panels added</p>
+        </div>
+        <div class="panels-container">
+        </div>
+      </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,72 @@
+<div class="survey-v2-content">
+  <div class="view-buttons">
+      <span class='view-btn-1 form-btn' id="form-btn">
+        <b>Panels</b>
+      </span>
+    <span class='view-btn-1' id="preview-btn">
+        <b>Preview</b>
+      </span>
+  </div>
+  <div class="mdl-grid mdl-grid--no-spacing center-items" id="survey-preview--content">
+    <div class="setup-container1 form">
+      <div class="mdl-cell mdl-cell--middle mdl-cell--12-col mdl-cell--12-col-phone mdl-cell--12-col-tablet">
+      <div class="wrapper edit-title">
+          <br>
+          <div class="new-panel-header">
+            <span class="tab-btn-back-icon">
+              <%= image_tag("back-icon-copy.svg") %>
+            </span>
+            <span class="panel-card-title">Edit Panel</span>
+          </div>
+        </div>
+          <div class="panel-item-container1">
+            <label for="invite-panelist">Add Learners</label>
+            <ul class="selected-learners"></ul>
+            <div class="pitch-select-shelter panel-learners">
+              <div class="pitch-select-option" id="learner-select-option">
+                <p id="selected">Select Learners</p>
+                <span class="down-arrow"></span>
+              </div>
+              <div class="panel-options-wrapper" id="learner-options-wrapper">
+                <div class = "panel-learners-display"></div>
+              </div>
+            </div>
+          </div>
+          <div class="add-panelists panel-item-container1">
+            <label for="invite-panelist">Add Panellists</label>
+          </div>
+          <div class="panel-item-container1 invitee-container panelists-wrapper">
+            <div class="invitee-input">
+              <input type="text" placeholder="eagle.example@andela.com" id="invite-panelist2" class="invitee-input-field invite-panelist2">
+              <span class="add-invitee-icon">
+              <%= image_tag("plus-filled.svg") %>
+            </span>
+            </div>
+            <hr class="panel-divider">
+            <div class="invitee-list">
+              <p class="invitee-list-header">
+                Invited Panellists
+              </p>
+              <div class="invitee-list-items list-lfa-email">
+              </div>
+              <div class="invitee-list-footer">
+                <p class="invitee-footer-text">
+                  Invited Panellists will receive an email
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class='submit-div'>
+            <div class='submit-div-inner'>
+              <button id="submit-panel-btn" style="display: flex" class='submit-panel-btn'>
+              Update
+              </button>
+              <button class="saving-btn" style="display: none;">Updating<span>.</span><span>.</span><span>.</span>
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>

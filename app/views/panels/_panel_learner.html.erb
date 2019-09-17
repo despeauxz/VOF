@@ -1,0 +1,13 @@
+<a href="<%= panel_learner[:is_graded] ? '#' : '/pitch/' + params[:pitch_id] + '/panels/' + params[:id] + '/' + panel_learner[:id].to_s %>"
+  class="panelist-card mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet <%= panel_learner[:is_graded] ? 'rated-learner-message' : '' %>"> 
+  <div class="panelist-card__content" id="<%= panel_learner[:id] %>">
+    <div class="persona-img">
+      <%= image_tag "https://ui-avatars.com/api/?name="+panel_learner[:first_name].slice(0, 1)+panel_learner[:last_name].slice(0, 1)+"&background=195BDC&color=fff&size=128" %>
+    </div>
+    <div class="persona-name"><%= panel_learner[:first_name] + " " + panel_learner[:last_name] %></div>
+    <div class="persona-mail"><%= panel_learner[:email] %></div>
+    <div class="<%= panel_learner[:is_rated] ? 'persona-badge-active' : 'persona-badge' %>"
+      ><%= panel_learner[:is_rated] ? "Rated" : "Not rated yet" %>
+    </div>
+  </div>
+</a>

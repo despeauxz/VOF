@@ -1,0 +1,77 @@
+<% flash.each do |type, msg| %>
+  <%= content_tag :span, msg, class: "puffly #{type}", id: "puffly" %>
+<% end %>
+<div class="main-content" id="panel-index">
+  <div class="loading-bar">
+    <div class="loader"></div>
+  </div>
+  <div id="main-panel-section">
+    <div class="dashboard mdl-tabs mdl-js-tabs">
+      <div class="mdl-tabs__tab-bar dashboard-side-section">
+          <% if admin? or (admin? && pitch_panelist?) %>
+            <a href="#panel-section" id="panel-tab" class="mdl-tabs__tab">
+              <div class="btn-card" id="panel-tab-card">
+                <span class="title">Created Panels</span>
+                <span class="body">You have <span id="panels-count"></span> Created</span>
+              </div>
+            </a>
+            <a href="#summary-section" id="summary-tab" class="mdl-tabs__tab">
+              <div class="btn-card" id="summary-tab-card">
+                <span class="title">Learners Summary</span>
+                <span class="body">
+                <%= "#{pluralize(@rating_count, "learner")} #{"has".pluralize(@rating_count)} been rated" %></span>
+              </div>
+            </a>
+          <% elsif pitch_panelist? && (not admin?) %>
+            <div class="btn-card">
+              <span class="title">Invited Panels</span>
+              <span class="body">You have <span id="panels-count"></span> Invitation(s)</span>
+            </div>
+          <% end %>
+      </div>
+      <div class="dashboard-main-section mdl-tabs__panel is-active" id="panel-section">
+        <div class="panels-grid">
+        </div>
+        <div class="btn-wrapper">
+          <div class="pagination-control panels-pagination"></div>
+        </div>
+      </div>
+      <div class="dashboard-main-section mdl-tabs__panel" id="summary-section">
+        <div class="summary-grid">
+            <div id="filter">
+                <span class='filter-icon' id='summary-name-filter'>Filter
+                  <i class="icon material-icons">filter_list</i>
+                </span>
+                <%= render partial: "summary_filter" %>
+            </div>
+            <div id='no-data'></div>
+          <% if @rating_count.zero? %>
+            <h2 class='no-data'>No data to show :(</h2>
+          <% else %>
+            <table class="campers-data-table summary-table">
+              <thead class="pitch-summary-table-head">
+                <tr class="tr_first">
+                  <th class="td-summary-table">Learner</th>
+                  <th class="td-summary-table">Panel</th>
+                  <th class="td-summary-table">UI/UX</th>
+                  <th class="td-summary-table">API<br>Functionality</th>
+                  <th class="td-summary-table">Error<br>Handling</th>
+                  <th class="td-summary-table">Project<br>Understanding</th>
+                  <th class="td-summary-table">Presentation<br>Skills</th>
+                  <th class="td-summary-table">Cumulative<br>Average</th>
+                </tr>
+              </thead>
+              <tbody class="pitch-summary-table-body" id="pitch-summary-data">
+              </tbody>
+            </table>
+            <div class="btn-wrapper">
+              <div class="pagination-control summary-page-pagination">
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render('panels/panel_delete_confirmation_modal') %>

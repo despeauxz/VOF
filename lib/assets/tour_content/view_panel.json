@@ -1,0 +1,69 @@
+{
+  "panelPageHints": [
+    {
+      "element": "#panellists-tab",
+      "hint": "<span class='intro-title'>This is the Panellists Tab</span><br><p>It shows the panellists in this panel.</p>"
+    }
+  ],
+  "takeThisTourAgainHint": [
+    {
+      "element": ".tour-trigger",
+      "hint": "<p>You can take the tour again by clicking on this icon<br>See you later!</p>"
+    }
+  ],
+  "panelViewSteps": [
+    {
+      "intro": "<span class='intro-title'>Welcome to the View Panel Page</span><br><p> Here, you can view already created Panel.</p>",
+      "role": "Admin"
+    },
+    {
+      "intro": "<span class='intro-title'>Welcome to the View Panel Page</span><br><p> Here, you can view a panel you have been invited to.</p>",
+      "role": "LFA"
+    },
+    {
+      "element": "#learners-tab",
+      "intro": "<span> Click this button to see learners in this Panel</span>",
+      "role": "Admin"
+    },
+    {
+      "element": "#panellists-tab",
+      "intro": "<span> Click this button to see all panellists in this Panel</span>",
+      "role": "Admin"
+    },
+    {
+      "element": ".pitch-grid",
+      "intro": "<span> This contains all the learners in this Panel</span>",
+      "role": "Admin"
+    },
+    {
+      "element": ".pitch-persona-card",
+      "intro": "<span> This is a Learner's card. Clicking on it allows you to view the learners ratings if the learner has been graded",
+      "role": "Admin"
+    },
+    {
+      "element": "#panelist-learners",
+      "intro": "<span> This contains all the learners in this Panel</span>",
+      "role": "LFA"
+    },
+    {
+      "element": ".panelist-card",
+      "intro": "<span> Click a learner's card to rate a learner on demo day</span>",
+      "role": "LFA"
+    },
+    {
+      "intro": "<span class='intro-title'>Look Out! This is a hint</span><br><div style='display: flex; align-items: center; justify-content: center; height: 2em;'><a class='introjs-hint'><div class='introjs-hint-dot'></div><div class='introjs-hint-pulse'></div></a></div><p>Look out for them. Click on them to get more information about certain parts of the page</p>"
+    }
+  ],
+  "panelistsSteps": [
+    {
+      "element": "#panellists-pitch-grid",
+      "intro": "<span> This contains all the Panellists in this Panel</span>",
+      "role": "Admin"
+    },
+    {
+      "element": "#panelist-card-body",
+      "intro": "<p>This is a Panellist's card</p>",
+      "role": "Admin"
+    }
+  ]
+}

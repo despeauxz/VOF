@@ -1,0 +1,42 @@
+{
+  "takeThisTourAgainHint": [
+    {
+      "element": ".tour-trigger",
+      "hint": "<p>You can take the tour again by clicking on this icon<br>See you later!</p>"
+    }
+  ],
+  "panelEditSteps": [
+    {
+      "intro": "<span class='intro-title'>Welcome to the Panel Edit Page</span><br><p> Here, you can update an already created Panel.</p>",
+      "role": "Admin"
+    },
+    {
+      "element": ".selected-learners",
+      "intro": "<span>This section shows and enables removal of learners from the Panel</span>",
+      "role": "Admin"
+    },
+    {
+      "element": ".pitch-select-option",
+      "intro": "<span>Use this to add learners to the Panel</span>",
+      "role": "Admin"
+    },
+    {
+      "element": ".invitee-input",
+      "intro": "<span>Use this to add panellists to the Panel</span>",
+      "role": "Admin"
+    },
+    {
+      "element": ".invitee-list",
+      "intro": "<span>This section shows and enables removal of panellists from the Panel.</span>",
+      "role": "Admin"
+    },
+    {
+      "element": ".submit-panel-btn",
+      "intro": "<span>Click on this button, to submit the updated information of the panel</span>",
+      "role": "Admin"
+    },
+    {
+      "intro": "<span class='intro-title'>Look Out! This is a hint</span><br><div style='display: flex; align-items: center; justify-content: center; height: 2em;'><a class='introjs-hint'><div class='introjs-hint-dot'></div><div class='introjs-hint-pulse'></div></a></div><p>Look out for them. Click on them to get more information about certain parts of the page</p>"
+    }
+  ]
+}

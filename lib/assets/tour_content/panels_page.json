@@ -1,0 +1,83 @@
+{
+   "pitchSetupHints": [
+     {
+       "element": ".more-icon",
+       "hint": "<span class='intro-title'>More Options icon</span><br><p>The More Options icon allows you to view the actions that can be performed on panels.</p>",
+       "hintPosition": "middle-middle"
+     },
+     {
+        "element": "#summary-tab-card",
+        "hint": "<span>Click the button below to continue the tour to the summary tab. </span>"
+      }
+    ],
+    "takeThisTourAgainHint": [
+      {
+        "element": ".tour-trigger",
+        "hint": "<p>You can take the tour again by clicking on this icon<br>See you later!</p>"
+      }
+    ],
+    "panelSetupSteps": [
+      {
+        "intro": "<span class='intro-title'>Welcome to the Panels Page</span><br><p> Here, you can create and view panels belonging to a pitch.</p>",
+        "role": "Admin"
+      },
+      {
+        "element": "#panel-tab-card",
+        "intro": "<span>This tab shows the number of panels you have created</span>",
+        "role": "Admin"
+      },
+      {
+        "element": ".new-panel-btn",
+        "intro": "<span>You can create a new panel by clicking on this button</span>",
+        "role": "Admin"
+      },
+      {
+        "element": "#new-panel-btn",
+        "intro": "<span>You can create a new panel by clicking on this card.</span>",
+        "role": "Admin"
+      },
+      {
+        "element": ".panel-card",
+        "intro": "<span>This is a panel card. Clicking on it allows you to view the learners and panellists in a particular panel.</span>",
+        "role": "Admin"
+      },
+      {
+        "element": ".dashboard-main-section",
+        "intro": "<span>This contains all the panels you have created or invited to.</span>",
+        "role": "Admin"
+      },
+      {
+        "intro": "<span class='intro-title'>Look Out! This is a hint</span><br><div style='display: flex; align-items: center; justify-content: center; height: 2em;'><a class='introjs-hint'><div class='introjs-hint-dot'></div><div class='introjs-hint-pulse'></div></a></div><p>Look out for them. Click on them to get more information about certain parts of the page</p>"
+      }
+    ],
+    "moreOptionsSteps": [
+      {
+        "element": ".more-icon",
+        "intro": "Hover on the icon to see more options for editing and deleting a panel.",
+        "role": "Admin"
+      }
+    ],
+    "summaryTabSteps": [
+      {
+        "element": "#summary-tab-card",
+        "intro": "<span>Clicking on this tab would display the details of all rated learners across all the panels in a pitch</span>",
+        "role": "Admin"
+      }, {
+        "element":".summary-grid",
+        "intro": "<span>This section displays the breakdown of all rated learners in the pitch </span>",
+        "role": "Admin"
+      }, {
+        "element":".pitch-summary-table-head",
+        "intro": "<span>These are the various criteria with which each learner is graded</span>",
+        "role": "Admin"
+      }, {
+        "element": ".pitch-summary-table-body",
+        "intro": "<span>This section shows the specific ratings a learner has earned for each of the above criteria</span>",
+        "role": "Admin"
+      }, {
+        "element": "#summary-name-filter",
+        "intro": "<span>Use this button to find or filter learners by their names</span>",
+        "role": "Admin"
+      }
+    ]
+  }

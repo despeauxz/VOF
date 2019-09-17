@@ -1,0 +1,63 @@
+<div class="ratings-container">
+  <div class="breakdown-panelists">
+    <div>
+            <span class="tab-btn-back-icon">
+                <%= image_tag("back-icon-copy.svg") %>
+            </span>
+      <span class="rating-info-1"><span class="learner-header-name"><%= @rating_details[:learner][:first_name]%> <%= @rating_details[:learner][:last_name]%></span>'s Rating Breakdown</span>
+      <p class="rating-info-2"><span class="learner-header-name"><%= @rating_details[:learner][:first_name]%> <%= @rating_details[:learner][:last_name]%></span> was rated by <span class="panelist-count"><%= @rating_details[:ratings].length %> <%= @rating_details[:ratings].length == 1 ? "panelist" : "panelists" %></span></p>
+    </div>
+    <div id="ratings-panelists">
+      <% @rating_details[:ratings].map do |rating| %>
+        <div class="one-panelist" id="<%= rating[:panelist_id]%>">
+          <div class="panelist-image panelist-abbr"><%= (rating[:panelist_email].split(".")[0]).slice(0, 1) %><%= (rating[:panelist_email].split(".")[1]).slice(0, 1) %></div>
+          <div class="panelist-info" id="<%= rating[:id]%>">
+            <div class="panelist-name"><%= rating[:panelist_email].split(".")[0]%> <%= (rating[:panelist_email].split(".")[1].split("@"))[0]%></div>
+            <p class="panelist-email"><%= rating[:panelist_email] %></p>
+          </div>
+        </div>
+      <%end %>
+    </div>
+  </div>
+  <div class="breakdown-one-panelist">
+    <div class="panelist-ratings">
+      <div class="header">
+                <span class="one-panelist-image panelist-abbr">
+                </span>
+        <span class="rating-info-1"><span class="panelist-name-header"></span> Ratings for <span class="learner-header-name"><%= @rating_details[:learner][:first_name]%> <%= @rating_details[:learner][:last_name]%></span></span>
+        <button class="cta-buttons edit-button">
+          Edit
+        </button>
+        <button class="cta-buttons submit-button" id="submit-edited-rating-button">
+          submit
+        </button>
+        <button class="cta-buttons cancel-button">
+          cancel
+        </button>
+      </div>
+      <div class="learner-ratings-per-panelist">
+        <%= render  "rating_breakdown" %>
+      </div>
+      <hr>
+      <div class="decision-wrapper">
+        <div class="inner">
+          <p class="decision-phrase">
+            <em>Will <span class="panelist-name-body"></span> want to work with this person on his/her team?</em>
+            <span class="decision-word-wrapper actual-rating"><span class="decision-word"></span></span>
+          </p>
+          <input type="radio" name="decision" value="yes" id="yes" class="edit-rating"><label for="yes" class="decision-input-label edit-rating">Yes</label>
+          <input type="radio" name="decision" value="maybe" id="maybe" class="edit-rating"><label for="maybe" class="decision-input-label edit-rating">Maybe</label>
+          <input type="radio" name="decision" value="no" id="no" class="edit-rating"><label for="no" class="decision-input-label edit-rating">No</label>
+        </div>
+        <p>Addtional Comments: <span class="decision-comments actual-rating"><em class="decision-comment"></em></span></p>
+        <textarea placeholder="Enter Comments" rows="3" cols="50" class="answer-body edit-rating" id="edit-comment"></textarea>
+      </div>
+    </div>
+    <div class="panelist-cumulative-average">
+      <span class="rating-info-1" id="rating-info-1"><span class="learner-header-name"><%= @rating_details[:learner][:first_name]%> <%= @rating_details[:learner][:last_name]%></span>'s Cumulative Average</span>
+      <div class="cumulative-ratings">
+        <%= render  "rating_breakdown" %>
+      </div>
+    </div>
+  </div>
+</div>

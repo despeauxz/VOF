@@ -1,0 +1,53 @@
+{
+  "takeThisTourAgainHint": [
+    {
+      "element": ".tour-trigger",
+      "hint": "<p>You can take the tour again by clicking on this icon<br>See you later!</p>"
+    }
+  ],
+  "panelCreateSteps": [
+    {
+      "intro": "<span class='intro-title'>Welcome to the Panel Setup Page</span><br><p> Here, you can create a panel with learners and panellists.</p>"
+    },
+    {
+      "element": "#invite-panelist",
+      "intro": "<span>Enter your preferred name of the panel.</span>",
+      "role": "Admin"
+    },
+    {
+      "element": ".panel-learners",
+      "intro": "<span>Choose learners from the dropdown list.</span>",
+      "role": "Admin"
+    },
+    {
+      "element": "#invite-panelist2",
+      "intro": "<span>Enter emails of panellists. These must be Andela emails, and must be entered one at a time.</span>",
+      "role": "Admin"
+    },
+    {
+      "element": ".add-invitee-icon",
+      "intro": "<span>Click the button to add the panellist's email.</span>",
+      "role": "Admin"
+    },
+    {
+      "element": ".invitee-list",
+      "intro": "<span>This is where the invited panellists' emails are displayed.</span>",
+      "role": "Admin"
+    },
+    {
+      "element": ".create-panel-btn",
+      "intro": "<span>Click this button to add a panel.</span>",
+      "role": "Admin"
+    },
+    {
+      "element": ".preview",
+      "intro": "<span>This is the space which contains cards for panels created.</span>",
+      "role": "Admin"
+    },
+    {
+      "element": "#submit-panel-btn",
+      "intro": "<span>Click this button to submit and finalise the panel creation process. This will also send the emails to the invited panellists.</span>",
+      "role": "Admin"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+<input type="hidden" value="<%= @personal_info.to_json %>" id="personal_info">
+<div id="edit-project-links-modal">
+  <div class="modal">
+    <div class="modal-top">
+      <div class="modal-header">
+        <span class="close-button close-modal"></span>
+        <div class="edit-learner-header-section">
+          <div class="edit-learner-header">
+            Edit Learner Links
+          </div>
+          <div class="line">
+            <span class="long"></span>
+            <span class="short"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-content">
+      <%= form_tag "editLearnerLinksForm", id: "editLearnerLinksForm", method: "post", multipart: true do %>
+        <div id="personal-detail-fields" class="edit-modal-content-body">
+          <div class="detail-form-links">
+            <div class="edit-learner-detail-wrapper">
+              <div class="edit-learner-detail-input">
+                <label for="github">Github Profile Link</label>
+                <%= text_field_tag("github", @personal_info[:links][:github], {id:"github-link", class: "form-input-field", type: "text"}) %>
+                <p id="github_pages_error" class="edit-modal-field-error">Github link is not valid</p>
+              </div>
+            </div>
+            <div class="edit-learner-detail-wrapper">
+              <div class="edit-learner-detail-input">
+                <label for="linkedin">Story board link</label>
+                <%= text_field_tag("linkedin", @personal_info[:links][:linkedin], {id:"story-board", class: "form-input-field", type: "text"}) %>
+                <p id="story_board_error" class="edit-modal-field-error">Storyboard link is not valid</p>
+              </div>
+            </div>
+          </div>
+          <div class="detail-form-links">
+            <div class="edit-learner-detail-wrapper">
+              <div class="edit-learner-detail-input">
+                <label for="github">Challenge one output</label>
+                <%= text_field_tag("github", @personal_info[:links][:github], {id:"challenge-one-link", class: "form-input-field", type: "text"}) %>
+                <p id="challenge_one_error" class="edit-modal-field-error">Challenge one link is not valid</p>
+              </div>
+            </div>
+            <div class="edit-learner-detail-wrapper">
+              <div class="edit-learner-detail-input">
+                <label for="linkedin">Challenge two output</label>
+                <%= text_field_tag("linkedin", @personal_info[:links][:linkedin], {id:"challenge-two-link", class: "form-input-field", type: "text"}) %>
+                <p id="challenge_two_error" class="edit-modal-field-error">Challenge two link is not valid</p>
+              </div>
+            </div>
+          </div>
+          <div class="detail-form-links">
+            <div class="edit-learner-detail-wrapper">
+              <div class="edit-learner-detail-input">
+                <label for="github">Challenge three output</label>
+                <%= text_field_tag("github", @personal_info[:links][:github], {id:"challenge-three-link", class: "form-input-field", type: "text"}) %>
+                <p id="challenge_three_error" class="edit-modal-field-error">Challenge three link is not valid</p>
+              </div>
+            </div>
+            <div class="edit-learner-detail-wrapper">
+              <div class="edit-learner-detail-input">
+                <label for="linkedin">Challenge four output</label>
+                <%= text_field_tag("linkedin", @personal_info[:links][:linkedin], {id:"challenge-four-link", class: "form-input-field", type: "text"}) %>
+                <p id="challenge_four_error" class="edit-modal-field-error">Challenge four link is not valid</p>
+              </div>
+            </div>
+          </div>
+          <div class="detail-form-links">
+            <div class="edit-learner-detail-wrapper">
+              <div class="edit-learner-detail-input">
+                <label for="trello">Heroku one</label>
+                <%= text_field_tag("trello", @personal_info[:links][:trello], {id:"heroku-one", class: "form-input-field", type: "text"}) %>
+                <p id="heroku_one_error" class="edit-modal-field-error">Heroku link is not valid</p>
+              </div>
+            </div>
+            <div class="edit-learner-detail-wrapper">
+              <div class="edit-learner-detail-input">
+                <label for="website">Heroku two</label>
+                <%= text_field_tag("website", @personal_info[:links][:website], {id:"heroku-two", class: "form-input-field", type: "text"}) %>
+                <p id="heroku_two_error" class="edit-modal-field-error">Heroku link is not valid</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="modal-bottom">
+      <div class="modal-btn-wrapper">
+        <button class="cancel-button">Cancel</button>
+        <button class="save-button" id="update-project-links">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+

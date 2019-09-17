@@ -1,0 +1,94 @@
+<div class="roles-and-permissions-page">
+
+  <section class="roles-and-permissions-page-top">
+    <div class="page-title-group">
+      <h2>Roles (<%=@roles.count%>)</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="roles-and-permissions-container">
+    <div class="roles-add-permissions-tab view-all-users">
+        <span class="roles-add-permissions-tab-item roles-view-users" id = "roles-view-users">View All Users</span>
+      </div>
+      <div class="roles-add-permissions-tab invite-users">
+        <span class="roles-add-permissions-tab-item">Invite Users</span>
+      </div>   
+    </div>
+  </section>
+  
+  <div class="roles-and-permissions-card-container">
+    <% if( admin? ) %>
+      <div class="add-new-roles-and-permissions-card">
+            <a>
+            <div class="add-new-roles-and-permissions-text-section">
+            <div class='add-icon'></div>
+              <p class="roles-and-permissions-title">Create New Role</p>
+            </div>
+          </a>
+        </div>
+      <% @roles.each do |role| %>
+        <div class="roles-and-permissions-page-card">
+            <a>
+            <div class="roles-and-permissions-text-section">
+              <p class="roles-and-permissions-title"><%= role.role_name %> </p>
+                <div class="view-permissions permission1 view-permission-<%= role.id %>" data-role-id="<%= role.id %>">
+                  <p class="roles-and-permissions-text">View Permissions</p>
+                </div>
+                <div class="set-permissions-btn permission2 set-permissions set-permisssion-<%= role.id %>" data-role-id="<%= role.id %>">
+                  <span class="roles-add-permissions-tab-item">Set Permissions</span>
+                </div>
+                <% if permission_set?(role) %>
+                  <div class="view-permissions view-perm-<%= role.id %>" data-role-id="<%= role.id %>">
+                    <p class="roles-and-permissions-text">View Permissions</p>
+                  </div>
+                <% else %>
+                  <div class="set-permissions-btn set-permissions set-perm-<%= role.id %>" data-role-id="<%= role.id %>">
+                    <span class="roles-add-permissions-tab-item">Set Permissions</span>
+                  </div>
+                <% end %>
+            </div>
+          </a>
+        </div>
+      <%end%>
+    <% end %>
+  </div>
+</div>
+
+<div class="all-users" style="display: none;">
+  <div  class="roles-and-permissions-header-tab">
+    <div class="back-arrow-section">
+      <div class="all-users-caption">
+        <%= image_tag("arrow.svg") %>
+       <span>All Users</span> 
+      </div> 
+    </div>
+    <div class="filter-by-all-roles-section">
+      <ul>
+        <li  class="filter-by-tab">Filter By</li>
+        <li class="all-roles-tab">All Roles
+          <span>
+              <%= image_tag("down-blue.svg") %>
+            </span>
+      </li>
+        <li  class="invite-users-tab" >Invite Users</li>
+      </ul>
+    </div>
+  </div>
+
+  <table class="roles-and-permission-table">
+    <thead>
+      <tr>
+        <th class="roles-permissions-header-name">Name</th>
+        <th class="roles-permissions-header-email">Email</th>
+        <th class="roles-permissions-header-role">Role</th>
+        <th class="roles-permissions-header-action">Action</th>
+      </tr>
+    </thead>
+    <tbody class="roles-and-permission-body users-table">
+    </tbody>
+</table>
+
+  <div class="no-users-message">
+    <hr/>
+    <h4> No Users Created Yet </h4>
+  </div>
+</div>

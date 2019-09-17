@@ -1,0 +1,39 @@
+{
+  "takeThisTourAgainHint": [
+    {
+      "element": ".tour-trigger",
+      "hint": "<p>You can take the tour again by clicking on this icon<br>See you later!</p>"
+    }
+  ],
+  "pitchEditTourSteps": [
+    {
+      "intro": "<span class='intro-title'>Welcome to the Pitch Edit Page</span><br><p> This page helps you to edit a pitch.</p>",
+      "role": "Admin"
+    },
+    {
+      "element": "#program-select-option",
+      "intro": "Use this dropdown to select a program",
+      "role": "Admin"
+    },
+    {
+      "element": "#cycle-select-option",
+      "intro": "Use this dropdown to select a cycle",
+      "role": "Admin"
+    },
+    {
+      "element": "#next-btn",
+      "intro": "Click next to continue",
+      "role": "Admin"
+    },
+    {
+      "element": "#select-demo-date",
+      "intro": "Choose a demo date",
+      "role": "Admin"
+    },
+    {
+      "element": "#update-btn",
+      "intro": "Click this button to update the pitch",
+      "role": "Admin"
+    }
+  ]
+}
